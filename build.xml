@@ -1,0 +1,12 @@
+<project name="InvoiceITRepoTest" default="deployInvoiceITRepoTest" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+    
+   
+    <target name="deployInvoiceITRepoTest">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" logType="Detail" deployRoot="src" runAllTests="false"/>
+    </target>
+ 
+
+</project>
